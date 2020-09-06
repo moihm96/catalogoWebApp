@@ -1,0 +1,37 @@
+<form class="contenedor" (ngSubmit) = "onSubmit()" #courseForm= "ngForm">
+    <h1>Añadir curso</h1>
+
+    <mat-checkbox  [(ngModel)]= "courseselect.activo" name = "activo" class="example-margin" labelPosition= "before">Activo</mat-checkbox>
+    
+    <mat-form-field appearance="fill">
+        <mat-label>Profesor</mat-label>
+        <select matNativeControl required [(ngModel)]="courseselect.profesor" name= "profesor" >
+        <option value="Ruth Perez">Ruth Perez</option>
+          <option value="Julio Pacheco">Julio Pacheco</option>
+          <option value="Francisco Carreras">Francisco Carreras</option>
+          <option value="Mercedes Castillejo">Mercedes Castillejo</option>
+          <option value="Beatriz Cabreras">Beatriz Cabreras</option>
+        </select>
+      </mat-form-field>
+
+    
+    <mat-form-field>
+      <input matInput [(ngModel)]="courseselect.titulo" name= "titulo" type="text" placeholder="Ingrese título">
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+        <mat-label>Nivel</mat-label>
+        <select matNativeControl required [(ngModel)]="courseselect.nivel" name= "nivel">
+        <option value="Básico">Básico</option>
+          <option value="Intermedio">Intermedio</option>
+          <option value="Avanzado">Avanzado</option>
+        </select>
+    </mat-form-field>
+
+    <mat-form-field>
+        <input matInput [(ngModel)]="courseselect.horas" name= "horas" type="number" step="5" placeholder="Ingrese horas">
+    </mat-form-field>
+
+    <button type="submit" mat-raised-button color="success">Añadir</button>
+  
+</form>

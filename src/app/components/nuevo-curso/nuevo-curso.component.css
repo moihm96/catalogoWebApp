@@ -1,0 +1,28 @@
+.contenedor {
+    display: flex;
+    flex-direction: column;
+    margin: 4rem auto;
+    max-width: 600px;
+    box-shadow: -1px 3px 66px 0px rgba(0,0,0,0.75);
+    padding: 1rem;
+}   
+
+.example-margin {
+    margin: 12px 0;
+    padding-left: 2%;
+}
+
+::ng-deep .mat-checkbox-checked .mat-checkbox-background,
+::ng-deep .mat-checkbox-indeterminate .mat-checkbox-background {
+  background-color: #005999 !important;
+}
+
+.mat-raised-button.mat-success{
+    color: #f0fff3;
+    background-color: #005999;
+}
+
+h1 {
+    color: #005999;
+    padding-left: 1%;
+}
